@@ -1,0 +1,159 @@
+.modal-product {
+	background-color: #fff;
+	width: 100%;
+	min-height: 100%;
+	padding: 32px 10px;
+	display: flex;
+}
+.modal-product__container {
+	max-width: 300px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.modal-product__title {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 120%; /* 33.6px */
+	margin-bottom: 12px;
+}
+.modal-product__content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.modal-product__image {
+	width: 100%;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+.modal-product__description {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 130%; /* 15.6px */
+	margin-bottom: 10px;
+}
+.modal-product__ingredients {
+	flex-grow: 1;
+	margin-bottom: 10px;
+}
+.modal-product__add {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.modal-product__btn {
+	flex-grow: 1;
+	padding: 9px;
+	background-color: #ff7020;
+	border-radius: 8px;
+
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 100%; /* 12px */
+	color: #fff;
+	transition: transform 0.1s ease, background-color 0.3s ease-in-out;
+}
+.modal-product__btn:hover {
+	background-color: #ffab08;
+}
+.modal-product__btn:focus-visible {
+	background-color: #f86310;
+}
+.modal-product__btn:active {
+	transform: translate(1px, 2px);
+}
+
+.modal-product__price {
+	text-align: right;
+
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 130%; /* 20.8px */
+}
+
+/* ============= адаптив используя медиа запрос ========================== */
+
+@media (min-width: 480px) {
+	.modal-product {
+		max-width: 524px;
+		min-height: auto;
+		width: 100%;
+		padding: 16px 16px 24px;
+		border-radius: 24px;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	}
+	.modal-product__container {
+		max-width: unset;
+	}
+	.modal-product__title {
+		margin-bottom: 16px;
+	}
+	.modal-product__content {
+		display: grid;
+		grid-template-columns: 226px 1fr;
+		grid-template-rows: min-content 1fr;
+		gap: 10px 8px;
+		margin-bottom: 22px;
+	}
+	.modal-product__image {
+		grid-row: 1 / 3;
+		margin-bottom: 0;
+	}
+	.modal-product__description {
+		grid-row: 1 / 1;
+		margin-bottom: 0;
+	}
+	.modal-product__ingredients {
+		grid-row: 2 / 3;
+		margin-bottom: 0;
+	}
+	.modal-product__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.modal-product__add {
+		margin-bottom: 0;
+	}
+	.modal-product__btn {
+		flex-grow: 0;
+		width: 218px;
+	}
+}
+/* ============= адаптив используя медиа запрос ========================== */
+
+@media (min-width: 1024px) {
+	.modal-product {
+		max-width: 684px;
+		padding: 24px 24px 36px;
+	}
+
+	.modal-product__title {
+		font-size: 40px;
+		margin-bottom: 24px;
+	}
+	.modal-product__content {
+		grid-template-columns: 276px 1fr;
+		gap: 10px 16px;
+		margin-bottom: 38px;
+	}
+	.modal-product__image {
+		font-size: 16px;
+	}
+	.modal-product__description {
+		grid-row: 1 / 1;
+		margin-bottom: 0;
+	}
+
+	.modal-product__btn {
+		width: 276px;
+		padding: 12px;
+	}
+	.modal-product__price {
+		font-size: 24px;
+	}
+}
